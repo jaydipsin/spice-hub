@@ -1,0 +1,30 @@
+/* styles/variables.css */
+:root {
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.5rem;
+  
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+  
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+  
+    --gap-sm: 0.5rem;
+    --gap-md: 1rem;
+    --gap-lg: 2rem;
+  
+    --h-sm: 32px;
+    --h-md: 48px;
+    --h-lg: 64px;
+  
+    --w-full: 100%;
+    --w-max: 1200px;
+
+    --grey-500:#c9c9c9;
+  }
+  

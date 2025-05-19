@@ -1,0 +1,70 @@
+
+  nav {
+    align-items: center;
+    border-radius: 40px;
+    padding: 10px 40px;
+    max-width: 1800px;
+  }
+  
+  /* * logo */
+  .logo span {
+    font-size: 1.2rem;
+  }
+  .logo img {
+    max-width: 50px;
+    height: auto;
+  }
+  
+  /* * logo */
+  
+  /* * category*/
+  .category a {
+    color: var(--secondory-cl);
+    position: relative;
+    padding: 10px;
+  }
+  
+  /* *category hover */
+  .category a::before,
+  .category a::after {
+    content: "";
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all 0.35s ease;
+    opacity: 0;
+  }
+  
+  .category a::before {
+    content: "";
+    right: 0;
+    top: 0;
+    border-top: 3px solid var(--primary-cl);
+    border-right: 3px solid var(--primary-cl);
+    transform: translate(-100%, 50%);
+  }
+  
+  .category a:after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid var(--primary-cl);
+    border-left: 3px solid var(--primary-cl);
+    transform: translate(100%, -50%);
+  }
+  
+  .category a:hover:before,
+  .category a:hover:after {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  
+  .category a:hover {
+    color: var(--primary-cl);
+  }
+  /* * category*/
+  /* * social media query*/
+  .social-media-container a i {
+    color: var(--secondory-cl);
+  }
+  
