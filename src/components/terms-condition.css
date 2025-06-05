@@ -1,0 +1,27 @@
+.container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 1.25rem;
+  margin-top: 30px;
+  color: #444;
+}
+p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+ul {
+  margin: 10px 0 20px 20px;
+}

@@ -1,5 +1,5 @@
 <div class="hero-container container flex justify-content-center">
-  <div class="wp-90 flex justify-content-space-between gap-20">
+  <div class="hero-section wp-90 flex justify-content-space-between gap-20">
     <div class="info flex flex-direction-col justify-content-center">
       <span class="text fw-600"
         >Welcome to Spice Hub Restro Cafe Where Flavor Meets Elegance!</span
@@ -40,105 +40,26 @@
 
 <!-- section-3 -->
 <div class="flex justify-content-center align-item-center">
-  <div class="location-countainer wp-90">
-    <div class="cafe-location flex align-item-center flex-direction-col gap-20">
-      <div
-        class="img-container wp-100 flex justify-content-center align-item-center"
-      >
-        <img
-          class="wp-100 hp-100"
-          src="./../../public/assets/IMG_3567.jpg"
-          alt=""
-        />
-      </div>
-      <div
-        class="location wp-100 flex justify-content-center align-item-center"
-      >
-        <span>Vashnodavi</span>
+  <div class="map-container wp-90 flex justify-content-space-around">
+    <div class="location-container flex align-item-center">
+      <div class="location-section flex gap-20">
+        <div class="location flex align-item-center gap-8">
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="add-text">Vaishnodevi</span>
+        </div>
+
+        <span class="sub-text"
+          >"We’re located across multiple spots in Ahmedabad, and we’re also
+          available in Udaipur."</span
+        >
       </div>
     </div>
 
-    <div class="cafe-location flex align-item-center flex-direction-col gap-20">
-      <div
-        class="img-container wp-100 flex justify-content-center align-item-center"
-      >
-        <img
-          class="wp-100 hp-100"
-          src="./../../public/assets/IMG_3567.jpg"
-          alt=""
-        />
+    <div class="map-img">
+      <div class="img-text flex align-item-center">
+        <span class="gradient-text">11+ Outlate</span>
       </div>
-      <div
-        class="location wp-100 flex justify-content-center align-item-center"
-      >
-        <span>Vashnodavi</span>
-      </div>
-    </div>
-
-    <div class="cafe-location flex align-item-center flex-direction-col gap-20">
-      <div
-        class="img-container wp-100 flex justify-content-center align-item-center"
-      >
-        <img
-          class="wp-100 hp-100"
-          src="./../../public/assets/IMG_3567.jpg"
-          alt=""
-        />
-      </div>
-      <div
-        class="location wp-100 flex justify-content-center align-item-center"
-      >
-        <span>Vashnodavi</span>
-      </div>
-    </div>
-
-    <div class="cafe-location flex align-item-center flex-direction-col gap-20">
-      <div
-        class="img-container wp-100 flex justify-content-center align-item-center"
-      >
-        <img
-          class="wp-100 hp-100"
-          src="./../../public/assets/IMG_3567.jpg"
-          alt=""
-        />
-      </div>
-      <div
-        class="location wp-100 flex justify-content-center align-item-center"
-      >
-        <span>Vashnodavi</span>
-      </div>
-    </div>
-    <div class="cafe-location flex align-item-center flex-direction-col gap-20">
-      <div
-        class="img-container wp-100 flex justify-content-center align-item-center"
-      >
-        <img
-          class="wp-100 hp-100"
-          src="./../../public/assets/IMG_3567.jpg"
-          alt=""
-        />
-      </div>
-      <div
-        class="location wp-100 flex justify-content-center align-item-center"
-      >
-        <span>Vashnodavi</span>
-      </div>
-    </div>
-    <div class="cafe-location flex align-item-center flex-direction-col gap-20">
-      <div
-        class="img-container wp-100 flex justify-content-center align-item-center"
-      >
-        <img
-          class="wp-100 hp-100"
-          src="./../../public/assets/IMG_3567.jpg"
-          alt=""
-        />
-      </div>
-      <div
-        class="location wp-100 flex justify-content-center align-item-center"
-      >
-        <span>Vashnodavi</span>
-      </div>
+      <img class="wp-100 hp-100" src="public/assets/map.png" alt="" />
     </div>
   </div>
 </div>
@@ -147,7 +68,7 @@
 
 <!-- section-4 -->
 
-<div class="franchise-form-container flex justify-content-center">
+<div id="form" class="franchise-form-container flex justify-content-center">
   <div class="beens-top">
     <img src="./../../../public/assets/fly-beens.png" alt="" />
   </div>
@@ -165,26 +86,33 @@
     >
       <form
         class="flex flex-direction-col justify-content-center gap-40 wp-100 hp-100"
+        action="https://api.web3forms.com/submit"
+        method="POST"
       >
+        <input
+          type="hidden"
+          name="access_key"
+          value="8ceb2b86-d46e-417f-b649-6a9fd6ad93a9"
+        />
         <div class="input-section-1 flex gap-30 wp-100">
           <div class="flex flex-direction-col gap-8 flex-1">
             <label for="phone">Phone No</label>
-            <input type="number" id="phone" class="wp-100" />
+            <input type="number" name="phone" id="phone" class="wp-100" />
           </div>
           <div class="flex flex-direction-col gap-8 flex-1">
             <label for="name">Name</label>
-            <input type="number" id="name" class="wp-100" />
+            <input type="text" name="name" id="name" class="wp-100" />
           </div>
         </div>
 
         <div class="input-section-2 flex flex-direction-col gap-8">
           <label for="email">Email</label>
-          <input type="email" id="email" required />
+          <input type="email" name="email" id="email" required />
         </div>
 
         <div class="input-section-3 flex flex-direction-col gap-8">
           <label for="textarea">Description</label>
-          <textarea id="textarea" rows="6"></textarea>
+          <textarea id="textarea" name="descriptionx" rows="6"></textarea>
         </div>
 
         <button class="btn primary-btn">Submit</button>
@@ -193,20 +121,18 @@
   </div>
 </div>
 
-
 <!-- section-5 -->
-
-<div class="coustomer-reviews-container  flex justify-content-center align-item-center flex-direction-col gap-20">
-
-  <div class="flex gap-20">
-
-    <!-- card -->
-
-    <div class="card flex flex-direction-col gap-20">
-      
-      <div class="flex flex-direction-col gap-12">
-        <span class="review">"Great place with amazing snacks and coffee! The ambience is warm and relaxing, and the service is fast and friendly. Perfect spot to chill or catch up with friends. Highly recommended!"</span>
-        <div class="flex gap-8">
+<div class="customer-reviews-carousel flex flex-direction-col gap-30">
+  <div class="carousel-track">
+    <!-- First set of cards (original) -->
+    <div class="card">
+      <div class="card-content">
+        <span class="review"
+          >"Great place with amazing snacks and coffee! The ambience is warm and
+          relaxing, and the service is fast and friendly. Perfect spot to chill
+          or catch up with friends. Highly recommended!"</span
+        >
+        <div class="stars">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -214,15 +140,23 @@
           <i class="fa-solid fa-star"></i>
         </div>
       </div>
-      <div class="flex align-item-center gap-12">
-        <img src="./../../public/assets/IMG_2392.JPG" alt="">
-        <span class="coustomer-name">Jaydeep sinh</span>
+      <div class="customer-info">
+        <img
+          src="./../../public/assets/IMG_2392.JPG"
+          alt="Customer Jaydeep sinh"
+        />
+        <span class="customer-name">Jaydeep sinh</span>
       </div>
     </div>
-    <div class="card flex flex-direction-col gap-20">
-      <div class="flex flex-direction-col gap-12">
-        <span class="review">"Great place with amazing snacks and coffee! The ambience is warm and relaxing, and the service is fast and friendly. Perfect spot to chill or catch up with friends. Highly recommended!"</span>
-        <div class="flex gap-8">
+
+    <div class="card">
+      <div class="card-content">
+        <span class="review"
+          >"Great place with amazing snacks and coffee! The ambience is warm and
+          relaxing, and the service is fast and friendly. Perfect spot to chill
+          or catch up with friends. Highly recommended!"</span
+        >
+        <div class="stars">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -230,59 +164,189 @@
           <i class="fa-solid fa-star"></i>
         </div>
       </div>
-      <div class="flex align-item-center gap-12">
-        <img src="./../../public/assets/IMG_2392.JPG" alt="">
-        <span class="coustomer-name">Jaydeep sinh</span>
+      <div class="customer-info">
+        <img
+          src="./../../public/assets/IMG_2392.JPG"
+          alt="Customer Jaydeep sinh"
+        />
+        <span class="customer-name">Jaydeep sinh</span>
       </div>
     </div>
 
+    <!-- Second set of cards (duplicates for seamless looping) -->
+    <div class="card">
+      <div class="card-content">
+        <span class="review"
+          >"Great place with amazing snacks and coffee! The ambience is warm and
+          relaxing, and the service is fast and friendly. Perfect spot to chill
+          or catch up with friends. Highly recommended!"</span
+        >
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <div class="customer-info">
+        <img
+          src="./../../public/assets/IMG_2392.JPG"
+          alt="Customer Jaydeep sinh"
+        />
+        <span class="customer-name">Jaydeep sinh</span>
+      </div>
+    </div>
 
+    <div class="card">
+      <div class="card-content">
+        <span class="review"
+          >"Great place with amazing snacks and coffee! The ambience is warm and
+          relaxing, and the service is fast and friendly. Perfect spot to chill
+          or catch up with friends. Highly recommended!"</span
+        >
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <div class="customer-info">
+        <img
+          src="./../../public/assets/IMG_2392.JPG"
+          alt="Customer Jaydeep sinh"
+        />
+        <span class="customer-name">Jaydeep sinh</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <span class="review"
+          >"Great place with amazing snacks and coffee! The ambience is warm and
+          relaxing, and the service is fast and friendly. Perfect spot to chill
+          or catch up with friends. Highly recommended!"</span
+        >
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <div class="customer-info">
+        <img
+          src="./../../public/assets/IMG_2392.JPG"
+          alt="Customer Jaydeep sinh"
+        />
+        <span class="customer-name">Jaydeep sinh</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <span class="review"
+          >"Great place with amazing snacks and coffee! The ambience is warm and
+          relaxing, and the service is fast and friendly. Perfect spot to chill
+          or catch up with friends. Highly recommended!"</span
+        >
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <div class="customer-info">
+        <img
+          src="./../../public/assets/IMG_2392.JPG"
+          alt="Customer Jaydeep sinh"
+        />
+        <span class="customer-name">Jaydeep sinh</span>
+      </div>
+    </div>
+
+    <!-- Second set of cards (duplicates for seamless looping) -->
+    <div class="card">
+      <div class="card-content">
+        <span class="review"
+          >"Great place with amazing snacks and coffee! The ambience is warm and
+          relaxing, and the service is fast and friendly. Perfect spot to chill
+          or catch up with friends. Highly recommended!"</span
+        >
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <div class="customer-info">
+        <img
+          src="./../../public/assets/IMG_2392.JPG"
+          alt="Customer Jaydeep sinh"
+        />
+        <span class="customer-name">Jaydeep sinh</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <span class="review"
+          >"Great place with amazing snacks and coffee! The ambience is warm and
+          relaxing, and the service is fast and friendly. Perfect spot to chill
+          or catch up with friends. Highly recommended!"</span
+        >
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <div class="customer-info">
+        <img
+          src="./../../public/assets/IMG_2392.JPG"
+          alt="Customer Jaydeep sinh"
+        />
+        <span class="customer-name">Jaydeep sinh</span>
+      </div>
+    </div>
   </div>
+</div>
+<!-- section-6 -->
 
-
-
-  <!-- row-2 -->
-
-
-  <div class="flex gap-20">
-
-    <!-- card -->
-
-    <div class="card flex flex-direction-col gap-20">
-
-      <div class="flex flex-direction-col gap-12">
-        <span class="review">"Great place with amazing snacks and coffee! The ambience is warm and relaxing, and the service is fast and friendly. Perfect spot to chill or catch up with friends. Highly recommended!"</span>
-        <div class="flex gap-8">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-      </div>
-      <div class="flex align-item-center gap-12">
-        <img src="./../../public/assets/IMG_2392.JPG" alt="">
-        <span class="coustomer-name">Jaydeep sinh</span>
-      </div>
+<div
+  class="social-media-section flex justify-content-center align-item-center gap-20"
+>
+  <div class="section-frame wp-90 flex justify-content-space-between">
+    <div class="flex justify-content-center youtube-frame">
+      <iframe
+        width="326"
+        height="350"
+        src="https://www.youtube.com/embed/OF1f-b6-jcY"
+        title="દેશીથી વિદેશી.. Friends અથવા Family સાથે માણો Spice Hub Café"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
-    <div class="card flex flex-direction-col gap-20">
-      <div class="flex flex-direction-col gap-12">
-        <span class="review">"Great place with amazing snacks and coffee! The ambience is warm and relaxing, and the service is fast and friendly. Perfect spot to chill or catch up with friends. Highly recommended!"</span>
-        <div class="flex gap-8">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-      </div>
-      <div class="flex align-item-center gap-12">
-        <img src="./../../public/assets/IMG_2392.JPG" alt="">
-        <span class="coustomer-name">Jaydeep sinh</span>
-      </div>
+    <div class="info flex flex-direction-col justify-content-center gap-20">
+      <span class="title">Featured on Local News</span>
+      <span class="content">
+        We’re proud to share that Spice Hub Restro Café was recently featured on
+        Gujrat first for our commitment to quality, taste, and warm hospitality.
+        This recognition is a reflection of our passion for serving freshly
+        prepared dishes that bring comfort and joy to every customer. Thank you
+        for being part of our journey — we look forward to welcoming you with
+        the same love and flavor that got us noticed!</span
+      >
     </div>
-
-
   </div>
-
 </div>

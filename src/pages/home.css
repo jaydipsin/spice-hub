@@ -45,7 +45,7 @@
   }
   .info-section {
     background-color: #c0c0c0;
-    padding: 0 40px;
+    padding: 24px 40px;
     .title {
       font-size: 32px;
       font-family: "Tagesschrift", system-ui;
@@ -59,34 +59,59 @@
   }
 }
 /* section-3 */
-.location-countainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: repeat(1fr);
-  column-gap: 24px;
-  row-gap: 30px;
-}
-
-.cafe-location {
-  width: 300px;
-
-  .img-container,
-  .location {
-    padding: 16px;
-    border: 1px solid var(--primary-cl);
-    border-radius: 18px;
-    background-color: #c0c0c0c6;
-    &:hover {
-      background-color: #c0c0c0;
+.map-container {
+  .location-container {
+    width: 45%;
+    .location-section {
+      flex-wrap: wrap;
+      .location {
+        min-width: 150px;
+        i {
+          color: var(--primary-cl);
+        }
+        i,
+        span {
+          font-size: 42px;
+          font-weight: 700;
+        }
+      }
+      .sub-text {
+        font-size: 18px;
+        font-weight: 300;
+        font-style: italic;
+      }
     }
   }
-  .img-container {
-    height: 250px;
-    img {
-      border-radius: 18px;
+  .map-img {
+    position: relative;
+    .img-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-55px, -90px);
+
+      .gradient-text {
+        font-weight: 700;
+        font-size: 45px;
+
+        background: linear-gradient(
+          180deg,
+          hsla(4, 95%, 16%, 1) 18%,
+          hsla(250, 14%, 61%, 1) 100%
+        );
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        /* For Firefox */
+        background-clip: text;
+        color: transparent;
+      }
     }
+    width: 45%;
   }
 }
+
 /* section-4 */
 .franchise-form-container {
   padding: 140px 0;
@@ -164,54 +189,215 @@
 }
 
 /* section 5 */
-.coustomer-reviews-container {
-  overflow-x: scroll;
-  height: 100vh;
-  padding: 50px 0;
-  background-color: #ecebebb0;
-  .card {
-    width: 350px;
-    padding: 16px;
-    min-height: 180px;
-    border-radius: 20px;
-    position: relative;
-    background: inherit;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    z-index: 1;
-    img{
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-    }
-    .coustomer-name{
-      font-weight: 300;
-      text-transform: uppercase;
-      color: var(--primary-cl);
-    }
-    .review{
-      letter-spacing: 0.5px;
-      font-size: 14px;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--primary-cl);
-    }
-    i{
-      color: #FFD700;
-    }
-    &:before {
-    content: '';
-    position: absolute;
-    background: inherit;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: -20px;
-   
-    filter: blur(10px);
-    z-index: -1;
+.customer-reviews-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+
+.card {
+  width: 400px; /* Adjust based on your design */
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stars {
+  display: flex;
+  gap: 8px;
+  color: gold;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.customer-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-50%); /* Move by half the width of all cards */
+  }
+}
+
+/* Pause animation on hover */
+.customer-reviews-carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+/* section - 6 */
+
+.social-media-section {
+  height: calc(100vh - 70px);
+  .youtube-frame,
+  .info {
+    width: 45%;
+  }
+  .info {
+    .title {
+      font-size: 32px;
+      color: var(--primary-cl);
+      font-weight: 700;
+    }
+    .content {
+      font-size: 18px;
+      letter-spacing: 1.2px;
+    }
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .hero-container {
+    .hero-section {
+      justify-content: none;
+      flex-direction: column;
+      gap: 60px;
+    }
+    .info {
+      order: 2;
+      .text {
+        font-size: 30px !important;
+      }
+      .description {
+        font-size: 16px;
+      }
+    }
+    .info,
+    .img-container {
+      width: 100%;
+    }
+    .img-container {
+      .circle {
+        width: 300px;
+        height: 300px;
+        img {
+          width: 280px;
+        }
+      }
+    }
+  }
+
+  /* section-2 */
+
+  .section2-container {
+    flex-direction: column;
+  }
+
+  /* map container */
+  .map-container {
+    margin-top: 150px;
+    flex-direction: column;
+    .location-container {
+      width: 100%;
+      order: 2;
+      .location-section {
+        text-align: center;
+        .location {
+          width: 100%;
+          justify-content: center;
+          i {
+            font-size: 20px !important;
+          }
+          .add-text {
+            font-size: 22px !important;
+          }
+        }
+        .sub-text {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .map-img {
+      .img-text {
+        top: 70%;
+        left: 55%;
+        .gradient-text {
+          font-size: 24px;
+        }
+      }
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  /* form */
+  #form {
+    .img-section {
+    }
+    .form-container {
+      width: 90vw;
+      flex-direction: column;
+      height: 100%;
+    }
+    .beens-top {
+      top: 83px;
+      right: -13px;
+    }
+    .beens-btm {
+      bottom: 60px;
+      left: -36px;
+    }
+    .beens-top,
+    .beens-btm {
+      img {
+        scale: 1.5;
+        height: 120px;
+        width: 120px;
+        rotate: 260deg;
+      }
+    }
+  }
+  /* coustomer review */
+  .customer-reviews-carousel {
+    margin-bottom: 150px;
+    .card {
+      width: 300px !important;
+    }
+  }
+
+  .social-media-section {
+    margin-top: 45px;
+    .section-frame {
+      gap: 40px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .info{
+      width: 100%;
+      .title{
+        font-size: 22px;
+      }
+      .content{
+        font-size: 16px;
+      }
+    }
   }
 }

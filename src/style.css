@@ -1,11 +1,12 @@
 @import url("./styles/variable.css");
 @import url("./../src/components/header/header.css");
+@import url("./../src/components/footer/footer.css");
+@import url("./../src/components/terms-condition.css");
 @import url("./pages/home.css");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap");
-
 :root {
   --primary-cl: #4e0702;
   --primary-cl-dull: #4e07025c;
@@ -46,7 +47,7 @@ a {
 .wp-85 {
   width: 85%;
 }
-.hp-100{
+.hp-100 {
   height: 100%;
 }
 /* *font size */
@@ -150,9 +151,23 @@ a {
   font-size: 18px;
   width: fit-content;
   transition: all 0.25s ease-in-out;
-  &:hover{
+  &:hover {
     background-color: var(--primary-cl);
     color: #fff;
     cursor: pointer;
   }
+}
+.vertical-line {
+  height: 100%;
+  width: 1px;
+  background-color: var(--primary-cl);
+}
+.horizontal-line{
+  height: 0.5px;
+  width: 100%;
+  background-color: var(--primary-cl);
+}
+a{
+  text-decoration: none;
+  color: var(--primary-cl);
 }
