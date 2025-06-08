@@ -48,4 +48,3 @@ loadHTML(
   null,
   "src/components/footer/footer.js"
 );
- 

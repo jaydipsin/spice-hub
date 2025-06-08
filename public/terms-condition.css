@@ -1,4 +1,4 @@
-.container {
+.term-container {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   max-width: 800px;
@@ -7,6 +7,14 @@
   background-color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  .close {
+    display: flex;
+    justify-content: end;
+    i {
+      color: var(--primary-cl);
+      font-size: 24px;
+    }
+  }
 }
 h1 {
   text-align: center;
