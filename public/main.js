@@ -17,7 +17,7 @@ async function loadHTML(id, file, callback, scriptFilePath) {
 
 loadHTML(
   "header",
-  "src/components/header/header.html",
+  "./../src/components/header/header.html",
   () => {
     const nav = document.querySelector("#header nav");
     if (!nav) {
@@ -37,14 +37,14 @@ loadHTML(
       }
     });
   },
-  "src/components/header/header.js"
+  "./../src/components/header/header.js"
 );
 
 // Load other sections normally
-loadHTML("main-content", "src/pages/home.html", null, "src/pages/home.js");
+loadHTML("main-content", "./../src/pages/home.html", null, "./../src/pages/home.js");
 loadHTML(
   "footer",
-  "src/components/footer/footer.html",
+  "./../src/components/footer/footer.html",
   null,
-  "src/components/footer/footer.js"
+  "./../src/components/footer/footer.js"
 );

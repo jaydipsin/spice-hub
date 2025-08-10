@@ -1,4 +1,5 @@
 .container {
+  padding-top: 90px;
   height: calc(100vh - 90px);
 }
 
@@ -271,7 +272,7 @@
   }
 }
 
-@media screen and (max-width: 759px) {
+@media screen and (max-width: 960px) {
   .hero-container {
     .hero-section {
       justify-content: none;
@@ -381,7 +382,7 @@
   }
 
   .social-media-section {
-    margin: 45px 0; 
+    margin: 45px 0;
     .section-frame {
       gap: 40px;
       flex-direction: column;
